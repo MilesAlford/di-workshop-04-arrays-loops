@@ -55,10 +55,12 @@ function draw() {
 ```
 
 Create a new sketch with the code and check it matched your prediction.
+I predict that this code will create multiple squares with each square having a pixel space of 20 away from the other on the X axis 
 
 **What's wrong with this code?**
-
+there is no create canvas function so a canvas will not be made to store the graphics, it also has many repetitions increasing the size of the code significantly
 **How could we improve it?**
+firstly use the createCanvas function to create a container to use graphics then use a while loop to shorten the code.
 
 There's a lot of repetition in the code here. Generally, as programmers, we try
 to avoid repetition - often the more code we have, the more space there is for
@@ -83,7 +85,7 @@ function draw() {
 ```
 
 **How does changing `count` effect your sketch?**
-
+changing "count" has no effect on the sketch as your just changing the name of the variable.
 Let's talk through this line by line:
 
 ---
@@ -148,7 +150,7 @@ x = x + 20
 ```
 
 **Write a description for these two lines in here**
-
+The rect function will put a square onto the current coordinate for the X axis which is 10. The line under it updates the value of the X coordinate by adding 20 onto the current value (10+20). the value of the X coordinate has now be overwritten into 30
 ---
 
 ```js
