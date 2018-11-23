@@ -204,7 +204,7 @@ to 5) gets moved to the `for` line. This makes things a lot easier to follow.
 
 **Go through the for loop and match each section to the while loop - all the
 same bits are there, they've just moved around**.
-
+for(var i = 0; i < count ; i++)
 **Replace the `while` loop in your sketch with a `for` loop**
 
 **Change your code to create a grid of squares instead of a single line. Note:
@@ -257,7 +257,7 @@ function draw() {
 ```
 
 **Create a new sketch with the code and run it. Was your prediction correct?**
-
+Creates a canvas with 3 squares moving along the y axis which bounce when they reach the top and bottom edges
 As in the previous example, we've got a lot of repetition here. **How would you
 refactor the code to avoid the repetition?**
 
@@ -288,29 +288,29 @@ happens.
 
 | Line                      | Expected Result | Actual Result | Were you right? Why? |
 | ------------------------- | --------------- | ------------- | -------------------- |
-| `[]`                      |                 |               |                      |
-| `[1, 2, 3]`               |                 |               |                      |
-| `['a', 'b', 'c']`         |                 |               |                      |
-| `['a', 2, false]`         |                 |               |                      |
-| `[].length`               |                 |               |                      |
-| `[5, 6, 7].length`        |                 |               |                      |
-| `var myArray = [5, 6, 7]` |                 |               |                      |
-| `myArray`                 |                 |               |                      |
-| `myArray.length`          |                 |               |                      |
-| `myArray[1]`              |                 |               |                      |
-| `myArray[0]`              |                 |               |                      |
-| `myArray[2]`              |                 |               |                      |
-| `myArray[3]`              |                 |               |                      |
-| `myArray[1] = 'hi'`       |                 |               |                      |
-| `myArray[1]`              |                 |               |                      |
-| `myArray`                 |                 |               |                      |
-| `myArray.push(14)`        |                 |               |                      |
-| `myArray`                 |                 |               |                      |
-| `myArray.length`          |                 |               |                      |
-| `var index = 1`           |                 |               |                      |
-| `myArray[index]`          |                 |               |                      |
-| `index = 2`               |                 |               |                      |
-| `myArray[index]`          |                 |               |                      |
+| `[]`                      |      []         |    []         |     Yes              |
+| `[1, 2, 3]`               |   [1,2,3]       |[1,2,3]        |     yes as it has created an array |
+| `['a', 'b', 'c']`         | create an array |   ditto       |     yes              |
+| `['a', 2, false]`         |['a', 2, false]  |   ditto       |     yes              |
+| `[].length`               |     3            |   0          |    no as it is an empty array |
+| `[5, 6, 7].length`        |     3           |     3         |    yes               |
+| `var myArray = [5, 6, 7]` | undefined       |   undefined   |    yes                  |
+| `myArray`                 |[5, 6, 7]        |[5, 6, 7]      |    yes                  |
+| `myArray.length`          |    3            |    3          |    yes                  |
+| `myArray[1]`              |     6           |     6         |    yes                  |
+| `myArray[0]`              |     5           |     5          |    yes                  |
+| `myArray[2]`              |     7           |     7          |    yes                  |
+| `myArray[3]`              | undefined       | undefined      |    yes                  |
+| `myArray[1] = 'hi'`       |overwrite value of 1 within array|      yes         |                      |
+| `myArray[1]`              |   'hi'          | 'hi'          |   yes                   |
+| `myArray`                 | [5,'hi',7]      | ditto         |  yes                    |
+| `myArray.push(14)`        |   14            |  4           |  no                    |
+| `myArray`                 |[5,'hi',7, 14]   | ditto        |   yes                 |
+| `myArray.length`          |     4           |  4            |  yes                 |
+| `var index = 1`           |   undefined     |   undefined   |                      |
+| `myArray[index]`          |  ???            | 'hi'          | index has become the substitute for 1 |
+| `index = 2`               | undefined       | ditto          |                      |
+| `myArray[index]`          |    7            |  7             |       yes               |
 
 Hopefully you'll be able to see that:
 
